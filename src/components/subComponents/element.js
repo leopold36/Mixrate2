@@ -15,8 +15,10 @@ const Element = (props) => {
       const {investments, deleteInvest} = props
       const investList = investments.map(inv => {
             return inv.amount > 40 ? (<div>
-                <div key={inv.id}> Name: {inv.name} Amount: {inv.amount}</div>
+                <h4 key={inv.id}> Name: {inv.name}</h4> 
+                <p>Amount: {inv.amount}</p>
                 <button onClick= {() => {deleteInvest(inv.id)}}>Delete</button>
+                
               </div>
           ) : null;
       });
